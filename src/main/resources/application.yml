@@ -5,5 +5,8 @@ spring:
     username: root
     password: "!junki123"
 
+  sql:
+    init:
+      mode: always
 mybatis:
   mapper-locations: classpath:mapper/*.xml
