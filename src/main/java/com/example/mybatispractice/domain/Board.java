@@ -12,13 +12,24 @@ public class Board {
     private Long id;
     private String title;
     private String content;
-    private Integer read;
     private String name;
+    private Member member;
 
-    public Board(String title, String content, Integer read, String name) {
+    public Board(String title, String content, String name, Member member) {
         this.title = title;
         this.content = content;
-        this.read = read;
         this.name = name;
+        this.member = member;
+    }
+
+    @Override
+    public String toString() {
+        return "Board{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", name='" + name + '\'' +
+                ", memberid=" + member.getId() +
+                '}';
     }
 }

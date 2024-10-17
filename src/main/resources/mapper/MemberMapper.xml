@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mybatispractice.mapper.MemberMapper">
+
+    <select id="findById" resultType="com.example.mybatispractice.domain.Member" parameterType="Long">
+        SELECT * FROM MEMBER WHERE id = #{id};
+    </select>
+
+
+    <!-- member 삭제시 board처리-->
+    <delete id="deleteById" parameterType="Long">
+        DELETE FROM MEMBER where id = #{id}
+    </delete>
+</mapper>

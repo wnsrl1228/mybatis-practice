@@ -11,3 +11,5 @@ spring:
       mode: always
 mybatis:
   mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # MyBatis 쿼리 로그를 콘솔에 표시
